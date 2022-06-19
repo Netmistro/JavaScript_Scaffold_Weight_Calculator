@@ -1,0 +1,2 @@
+# JavaScript_Scaffold_Weight_Calculator
+JavaScript weight calculator for scaffold materials
