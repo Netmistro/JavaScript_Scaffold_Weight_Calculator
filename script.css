@@ -1,0 +1,23 @@
+*,
+*::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.container-sm {
+    width: 500px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
