@@ -143,7 +143,6 @@ const scaffoldBoard1_5m = [
 // Add constants here
 const selectMaterialCategory = document.getElementById('material-dropdown');
 const materialListing = document.getElementById('list-container');
-const materialItem = document.querySelector('.matItem');
 
 // Onload hide the material container
 window.onload = (e) => {
@@ -159,28 +158,46 @@ selectMaterialCategory.addEventListener('change', (e) => {
   while (materialListing.firstChild) {
     materialListing.removeChild(materialListing.lastChild);
   }
-  // Switch the case depending on the selected and display the group
 
+  // Switch the case depending on the selected and display the group
   switch (e.target.value) {
     case '0':
+      count = 0;
       scaffoldTubes.forEach((element) => {
-        addNewButton();
+        addNewButton(count);
         addNewInputQty();
-        addNewSpanDescription(element.name);
+        addNewSpanDescription(element.name + '\n');
+        count++;
       });
+      const btn1 = document.getElementById('0');
+      btn1.addEventListener('click', (e) => {
+        console.log(e.target.value);
+      });
+
+      // for (let i = 0; i < scaffoldTubes.length - 1; i++) {
+      //   const element = scaffoldTubes[i];
+      //   const btnAdd = document.getElementById('element');
+      //   // Loop through each button
+      //   btnAdd[element].addEventListener('click', (e) => {
+      //     console.log(e.target.value);
+      //   });
+      // }
+
       break;
     case '1':
       scaffoldBoard1_2m.forEach((element) => {
         addNewButton();
         addNewInputQty();
-        addNewSpanDescription(element.name);
+        addNewSpanDescription(element.name + '\n');
+        ('<br>');
       });
       break;
     case '2':
       scaffoldBoard1_5m.forEach((element) => {
         addNewButton();
         addNewInputQty();
-        addNewSpanDescription(element.name);
+        addNewSpanDescription(element.name + '\n');
+        ('<br>');
       });
       break;
     default:
@@ -189,9 +206,10 @@ selectMaterialCategory.addEventListener('change', (e) => {
 });
 
 // Add New Add Button
-function addNewButton() {
+function addNewButton(name) {
   const newAddButton = document.createElement('button');
-  newAddButton.classList.add('btn', 'matItem', 'mb-1', 'btn-danger', 'col-2');
+  newAddButton.classList.add('btn-add');
+  newAddButton.setAttribute('id', name);
   newAddButton.innerText = 'Add';
   materialListing.append(newAddButton);
 }
@@ -199,7 +217,7 @@ function addNewButton() {
 // Add New Input Box
 function addNewInputQty() {
   const newInput = document.createElement('input');
-  newInput.classList.add('matItem', 'col-2', 'mb-1');
+  newInput.classList.add('qty-add');
   newInput.type = 'number';
   newInput.placeholder = 'Qty';
   materialListing.append(newInput);
@@ -208,12 +226,7 @@ function addNewInputQty() {
 // Add new Material Description using Span
 function addNewSpanDescription(materialDescription) {
   const newMaterialDescription = document.createElement('span');
-  newMaterialDescription.classList.add(
-    'matItem',
-    'description',
-    'mb-1',
-    'col-8'
-  );
+  newMaterialDescription.classList.add('description-add');
   newMaterialDescription.innerText = materialDescription;
   materialListing.append(newMaterialDescription);
 }
