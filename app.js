@@ -145,6 +145,9 @@ const selectMaterialCategory = document.getElementById("material-dropdown");
 const materialListing = document.getElementById("list-container");
 const outputContainer = document.querySelector(".output-container");
 
+// Clear all local storage
+localStorage.clear();
+
 // Onload hide the material container
 window.onload = (e) => {
   materialListing.style.visibility = "hidden";
@@ -172,16 +175,16 @@ selectMaterialCategory.addEventListener("change", (e) => {
       });
 
       let btn = document.querySelectorAll(".btn-add");
-      let inputQty = document.querySelectorAll(".qty-add");
+      let inputQty = document.querySelectorAll(".qty-span");
+      let addQty = document.getElementById(".0");
 
       btn.forEach((element) => {
         element.addEventListener("click", (e) => {
           // Add new span element for row
           addNewSpanElement(e.target.value);
-          console.log(e.target.value);
 
           // Add the quantity to the output container
-          addNewSpanElement(inputQty[0]);
+          inputQty.innerText = "1";
           // Add the description to the output container
 
           // Get weight from the Array of materials
@@ -245,10 +248,12 @@ function addNewSpanElement(qty) {
   outputContainer.append(qtySpan);
 }
 
-// Add new Span element for output container
-function addNewSpanElement(qty) {
-  const qtySpan = document.createElement("span");
-  qtySpan.classList.add("qty-span");
-  qtySpan.innerText = qty;
-  outputContainer.append(qtySpan);
+let scaffoldTubeParse = JSON.parse(JSON.stringify(scaffoldTubes));
+console.log(scaffoldTubeParse.length);
+for (let i = 0; i < scaffoldTubeParse.length; i++) {
+  let element = scaffoldTubeParse[i];
+  console.log(scaffoldTubeParse[element]);
 }
+
+// let p = localStorage.setItem("Dress", scaff[0].name);
+// console.log(p);
