@@ -45,11 +45,10 @@ body {
     align-items: flex-start;
     justify-content: center;
     align-content: center;
-    margin: 0.5rem;
     max-width: 100%;
     padding: 1%;
     margin: 2%;
-    background: #E1E0DE;
+    background: #00d4ff;
     outline: none;
     border: none;
     border-radius: 1rem;
@@ -96,6 +95,10 @@ span {
     border: none;
     margin: 0.1rem;
     color: black;
+}
+
+.selected-material .output-table-head {
+    font-weight: 600;
 }
 
 .selected-material {

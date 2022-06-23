@@ -166,20 +166,27 @@ selectMaterialCategory.addEventListener("change", (e) => {
       count = 0;
       scaffoldTubes.forEach((element) => {
         addNewButton(count);
-        addNewInputQty();
+        addNewInputQty(count);
         addNewSpanDescription(element.name + "\n");
         count++;
       });
 
       let btn = document.querySelectorAll(".btn-add");
+      let inputQty = document.querySelectorAll(".qty-add");
+
       btn.forEach((element) => {
         element.addEventListener("click", (e) => {
-          console.log(e.target);
-          // Add new span element
+          // Add new span element for row
           addNewSpanElement(e.target.value);
-          // Add the quantity to the output container
+          console.log(e.target.value);
 
+          // Add the quantity to the output container
+          addNewSpanElement(inputQty[0]);
           // Add the description to the output container
+
+          // Get weight from the Array of materials
+
+          // Perform calculation based on weight and qty
         });
       });
 
@@ -204,20 +211,21 @@ selectMaterialCategory.addEventListener("change", (e) => {
 });
 
 // Add New Add Button
-function addNewButton(name) {
+function addNewButton(id) {
   const newAddButton = document.createElement("button");
   newAddButton.classList.add("btn-add");
-  newAddButton.setAttribute("id", name);
+  newAddButton.setAttribute("id", id);
   newAddButton.innerText = "Add";
   materialListing.append(newAddButton);
 }
 
 // Add New Input Box
-function addNewInputQty() {
+function addNewInputQty(id) {
   const newInput = document.createElement("input");
   newInput.classList.add("qty-add");
   newInput.type = "number";
   newInput.placeholder = "Qty";
+  newInput.setAttribute("id", id);
   materialListing.append(newInput);
 }
 
