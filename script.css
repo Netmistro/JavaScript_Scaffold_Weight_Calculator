@@ -95,6 +95,7 @@ span {
     outline: none;
     border: none;
     margin: 0.1rem;
+    color: black;
 }
 
 .selected-material {
