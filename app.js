@@ -142,25 +142,23 @@ const scaffoldBoard1_5m = [
 
 // Add constants here
 const selectMaterialCategory = document.getElementById("material-dropdown");
-const materialListing = document.getElementById("list-container");
+const listContainer = document.getElementById("list-container");
 const outputContainer = document.querySelector(".output-container");
-
-// Clear all local storage
-localStorage.clear();
+const selectedMaterials = document.querySelectorAll(".selected-material")[0];
 
 // Onload hide the material container
 window.onload = (e) => {
-  materialListing.style.visibility = "hidden";
+  listContainer.style.visibility = "hidden";
 };
 
 // On change or select of material category
 selectMaterialCategory.addEventListener("change", (e) => {
   // Change the visibility of the container
-  materialListing.style.visibility = "visible";
+  listContainer.style.visibility = "visible";
 
   // Remove all child nodes if they exist from the parent container
-  while (materialListing.firstChild) {
-    materialListing.removeChild(materialListing.lastChild);
+  while (listContainer.firstChild) {
+    listContainer.removeChild(listContainer.lastChild);
   }
 
   // Switch the case depending on the selected and display the group
@@ -169,34 +167,26 @@ selectMaterialCategory.addEventListener("change", (e) => {
       count = 0;
       scaffoldTubes.forEach((element) => {
         addNewInputQty(count);
-        addNewSpanDescription(element.name + "\n");
-        addNewUnitWeight("Text");
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + "\n");
         count++;
       });
 
+      //Add Button Query Selector
+      let addItemsButton = document.querySelector(".btn-add");
+
+      // Empty array of objects
+      myArrayofObjects = {};
+
+      // Constants for each element
       let inputQty = document.querySelectorAll(".qty-add");
-      let matDesc = document.querySelectorAll(".description-add");
-      let weight = document.querySelectorAll(".weight-add");
+      let descriptionAdd = document.querySelectorAll(".description-add");
+      let unitWeightAdd = document.querySelectorAll(".unit-weight-add");
 
-      let btn = document.querySelector(".btn-add");
-
-      btn.addEventListener("click", (e) => {
-        for (let i = 0; i < inputQty.length; i++) {
-          const input = inputQty[i];
-          if (input.value === "") {
-            continue;
-          } else {
-            const mat = matDesc[i];
-            localStorage.setItem(input.value, mat.innerText);
-
-            console.log(input.value);
-            console.log(mat.innerText);
-            outputArray = [input.value];
-            outputArray = outputArray.concat(mat.innerText);
-            outputArray = outputArray.concat(outputArray);
-          }
-        }
-        console.log(outputArray);
+      // Event listener for the click button
+      addItemsButton.addEventListener("click", (e) => {
+        // Loop through and add each element
+        // Add them to the Output Table below
       });
 
       break;
@@ -215,7 +205,7 @@ function addNewInputQty(id) {
   newInput.type = "number";
   newInput.placeholder = "Qty";
   newInput.setAttribute("id", id);
-  materialListing.append(newInput);
+  listContainer.append(newInput);
 }
 
 // Add new Material Description using Span
@@ -223,15 +213,23 @@ function addNewSpanDescription(materialDescription) {
   const newMaterialDescription = document.createElement("span");
   newMaterialDescription.classList.add("description-add");
   newMaterialDescription.innerText = materialDescription;
-  materialListing.append(newMaterialDescription);
+  listContainer.append(newMaterialDescription);
 }
 
 // Add new Weight using Span
 function addNewUnitWeight(weight) {
   const unitWeight = document.createElement("span");
-  unitWeight.classList.add("weight-add");
+  unitWeight.classList.add("unit-weight-add");
   unitWeight.innerText = weight;
-  materialListing.append(weight);
+  listContainer.append(unitWeight);
+}
+
+// Add new Total Weight using Span
+function addNewTotalWeight(totalWeightAdd) {
+  const totalWeight = document.createElement("span");
+  totalWeight.classList.add("unit-weight-add");
+  totalWeight.innerText = totalWeightAdd;
+  listContainer.append(totalWeight);
 }
 
 // Add new Span element for output container
@@ -241,11 +239,3 @@ function addNewSpanElement(qty) {
   qtySpan.innerText = qty;
   outputContainer.append(qtySpan);
 }
-
-// let scaffoldTubeParse = JSON.parse(JSON.stringify(scaffoldTubes));
-// console.log(scaffoldTubeParse);
-
-// for (let i = 0; i < scaffoldTubeParse.length; i++) {
-//   let element = scaffoldTubeParse[i];
-//   localStorage.setItem(element.name, element.weight);
-// }
