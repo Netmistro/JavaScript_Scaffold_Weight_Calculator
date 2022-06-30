@@ -176,16 +176,34 @@ selectMaterialCategory.addEventListener("change", (e) => {
       let addItemsButton = document.querySelector(".btn-add");
 
       // Empty array of objects
-      myArrayofObjects = {};
+      myArrayofObjects = [
+        { Qty: "", Description: "", Weight: "", TotalWeight: "" },
+      ];
 
       // Constants for each element
-      let inputQty = document.querySelectorAll(".qty-add");
+      let inputQtyAdd = document.querySelectorAll(".qty-add");
       let descriptionAdd = document.querySelectorAll(".description-add");
       let unitWeightAdd = document.querySelectorAll(".unit-weight-add");
 
       // Event listener for the click button
       addItemsButton.addEventListener("click", (e) => {
-        // Loop through and add each element
+        // Loop through and add each element+
+
+        inputQtyAdd.forEach((inputElement) => {
+          if (!(inputElement.value === "" || inputElement.value === "0")) {
+            for (let i = 0; i < descriptionAdd.length; i++) {
+              const element = descriptionAdd[i];
+              console.log(element);
+            }
+            descriptionAdd.forEach((element) => {
+              // console.log(element.innerText);
+            });
+          }
+        });
+
+        unitWeightAdd.forEach((element) => {
+          console.log(element.innerText);
+        });
         // Add them to the Output Table below
       });
 
