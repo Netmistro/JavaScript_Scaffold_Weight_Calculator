@@ -175,11 +175,6 @@ selectMaterialCategory.addEventListener("change", (e) => {
       //Add Button Query Selector
       let addItemsButton = document.querySelector(".btn-add");
 
-      // Empty array of objects
-      myArrayofObjects = [
-        { Qty: "", Description: "", Weight: "", TotalWeight: "" },
-      ];
-
       // Constants for each element
       let inputQtyAdd = document.querySelectorAll(".qty-add");
       let descriptionAdd = document.querySelectorAll(".description-add");
@@ -188,23 +183,18 @@ selectMaterialCategory.addEventListener("change", (e) => {
       // Event listener for the click button
       addItemsButton.addEventListener("click", (e) => {
         // Loop through and add each element+
-
-        inputQtyAdd.forEach((inputElement) => {
-          if (!(inputElement.value === "" || inputElement.value === "0")) {
-            for (let i = 0; i < descriptionAdd.length; i++) {
-              const element = descriptionAdd[i];
-              console.log(element);
-            }
-            descriptionAdd.forEach((element) => {
-              // console.log(element.innerText);
-            });
+        for (let i = 0; i < inputQtyAdd.length; i++) {
+          if (!(inputQtyAdd[i].value === "" || inputQtyAdd[i].value === "0")) {
+            // Send all values to the console once the input field isn't empty
+            console.log(inputQtyAdd[i].value);
+            console.log(descriptionAdd[i].innerText);
+            console.log(unitWeightAdd[i].innerText);
           }
-        });
-
-        unitWeightAdd.forEach((element) => {
-          console.log(element.innerText);
-        });
-        // Add them to the Output Table below
+        }
+        // Clear all input boxes for quantities
+        for (let j = 0; j < inputQtyAdd.length; j++) {
+          inputQtyAdd[j].value = "";
+        }
       });
 
       break;
