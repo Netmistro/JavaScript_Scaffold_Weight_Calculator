@@ -66,42 +66,42 @@ const scaffoldTubes = [
 const scaffoldBoard1_2m = [
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 13'",
-    weight: "0",
+    weight: "20",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 10'",
-    weight: "0",
+    weight: "15.4",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 08'",
-    weight: "0",
+    weight: "12.35",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 06'",
-    weight: "0",
+    weight: "9.25",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 04'",
-    weight: "0",
+    weight: "6.16",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 02'",
-    weight: "0",
+    weight: "3.08",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 01'",
-    weight: "0",
+    weight: "1.54",
     group: "Scaffold Boards",
   },
 ];
 
-// Define the variables to populate the Scaffold Boards 1.2m table here
+// Define the variables to populate the Scaffold Boards 1.5m table here
 const scaffoldBoard1_5m = [
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 13'",
@@ -145,10 +145,13 @@ const selectMaterialCategory = document.getElementById("material-dropdown");
 const listContainer = document.getElementById("list-container");
 const outputContainer = document.querySelector(".output-container");
 const selectedMaterials = document.querySelectorAll(".selected-material")[0];
+const displayWeightDiv = document.querySelector('.total-weight');
 
 // Onload hide the material container
 window.onload = (e) => {
   listContainer.style.visibility = "hidden";
+  displayWeightDiv.style.visibility = "hidden";
+  outputContainer.style.visibility = "hidden";
 };
 
 // On change or select of material category
@@ -183,6 +186,11 @@ selectMaterialCategory.addEventListener("change", (e) => {
 
       // Event listener for the click button
       addItemsButton.addEventListener("click", (e) => {
+
+        // Make visible the weight screen and the total weights
+        displayWeightDiv.style.visibility = "visible";
+        outputContainer.style.visibility = "visible";
+
         // Loop through each element based on click add button
         let weightKg = 0.00;
 
@@ -220,21 +228,18 @@ selectMaterialCategory.addEventListener("change", (e) => {
         }
 
         // Calculate Grand Totals
-        let w = document.querySelectorAll('.weight');
-        w.forEach(element => {
+        const outWeight = document.querySelectorAll('.weight');
+        outWeight.forEach(element => {
           weightKg = weightKg + parseFloat(element.innerText);
         });
-        console.log(weightKg);
-        let t = document.querySelector('.total-weight');
-        t.innerText = "";
-        t.append(`Kg => ${weightKg.toFixed(1)}
-        lbs. => ${(weightKg * 2.204).toFixed(1)}
-        Tons => ${(weightKg / 1000).toFixed(1)}`);
+        displayWeightDiv.innerText = "";
+        displayWeightDiv.append(`${weightKg.toFixed(1)} >Kg.
+        ${(weightKg * 2.204).toFixed(1)} >lbs.
+        ${(weightKg / 1000).toFixed(1)} >Tons.`);
       });
-
       break;
     case "1":
-      scaffoldBoard1_2m.forEach((element) => { });
+
       break;
     default:
       break;
@@ -275,45 +280,3 @@ function addNewTotalWeight(totalWeightAdd) {
   totalWeight.innerText = totalWeightAdd;
   listContainer.append(totalWeight);
 }
-
-// Add new Span element for output container
-function addNewSpanElement(qty) {
-  const qtySpan = document.createElement("span");
-  qtySpan.classList.add("qty-span");
-  qtySpan.innerText = qty;
-  outputContainer.append(qtySpan);
-}
-
-// CODE FOR OUTPUT MATERIALS BELOW
-// Quantity Output to the Output Screen Below
-function qtyOutput(quantity) {
-  const qtyOutputSpan = document.createElement("span");
-  qtyOutputSpan.classList.add("mat");
-  qtyOutputSpan.innerText = quantity;
-  selectedMaterials.append(qtyOutputSpan);
-}
-
-// Description output Span
-function outDescription(outDescription) {
-  const descriptionOutputSpan = document.createElement("span");
-  descriptionOutputSpan.classList.add("mat");
-  descriptionOutputSpan.innerText = outDescription;
-  selectedMaterials.append(descriptionOutputSpan);
-}
-
-// Unit Weight output Span - done send output to screen
-function outputUnitWeight(outUnitWeight) {
-  const unitWeightOutputSpan = document.createElement("span");
-  // unitWeightOutputSpan.classList.add("unit-weight-out");
-  // selectedMaterials.append(unitWeightOutputSpan);
-  // unitWeightOutputSpan.append(outUnitWeight);
-}
-
-// Output Span Total Weight
-function outTotalWeight(outQuantity, outUnitWeight) {
-  const totalWeightOutputSpan = document.createElement("span");
-  totalWeightOutputSpan.classList.add("mat");
-  totalWeightOutputSpan.innerText = (outQuantity * outUnitWeight).toFixed(2);
-  selectedMaterials.append(totalWeightOutputSpan);
-  selectedMaterials.append(document.createElement("br"));
-};

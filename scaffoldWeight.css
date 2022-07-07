@@ -135,6 +135,8 @@ input {
 }
 
 .total-weight {
+    background-color: green;
+    border-radius: 0.5rem;
     color: black;
     font-weight: bold;
     width: 26rem;
