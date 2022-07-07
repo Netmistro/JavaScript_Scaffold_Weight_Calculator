@@ -126,8 +126,8 @@ span {
 }
 
 .total-weight {
-    background-color: #ff4c4c;
-    border-radius: 0.5rem;
+    background-color: #f47721;
+    border-radius: 1rem;
     color: black;
     font-weight: bold;
     display: flex;
