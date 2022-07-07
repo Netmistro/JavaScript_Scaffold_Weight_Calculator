@@ -66,7 +66,7 @@ const scaffoldTubes = [
 const scaffoldBoard1_2m = [
   {
     name: "Scaffold Board BS EN 2482 1.2m Support MG - 13'",
-    weight: "20",
+    weight: "20.0",
     group: "Scaffold Boards",
   },
   {
@@ -105,41 +105,40 @@ const scaffoldBoard1_2m = [
 const scaffoldBoard1_5m = [
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 13'",
-    weight: "0",
+    weight: "20.0",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 10'",
-    weight: "0",
+    weight: "15.4",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 08'",
-    weight: "0",
+    weight: "12.35",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 06'",
-    weight: "0",
+    weight: "9.25",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 04'",
-    weight: "0",
+    weight: "6.16",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 02'",
-    weight: "0",
+    weight: "3.08",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 01'",
-    weight: "0",
+    weight: "1.54",
     group: "Scaffold Boards",
   },
 ];
-
 // Add constants here
 const selectMaterialCategory = document.getElementById("material-dropdown");
 const listContainer = document.getElementById("list-container");
@@ -174,72 +173,27 @@ selectMaterialCategory.addEventListener("change", (e) => {
         addNewUnitWeight(element.weight + "\n");
         count++;
       });
-
-      //Add Button Query Selector
-      let addItemsButton = document.querySelector(".btn-add");
-
-      // Constants for each element
-      let inputQtyAdd = document.querySelectorAll(".qty-add");
-      let descriptionAdd = document.querySelectorAll(".description-add");
-      let unitWeightAdd = document.querySelectorAll(".unit-weight-add");
-
-
-      // Event listener for the click button
-      addItemsButton.addEventListener("click", (e) => {
-
-        // Make visible the weight screen and the total weights
-        displayWeightDiv.style.visibility = "visible";
-        outputContainer.style.visibility = "visible";
-
-        // Loop through each element based on click add button
-        let weightKg = 0.00;
-
-        for (let i = 0; i < inputQtyAdd.length; i++) {
-
-          if (!(inputQtyAdd[i].value === "" || inputQtyAdd[i].value === "0")) {
-            // Send all values to the console once the input field isn't empty
-            const outputDiv = document.createElement("div");
-            outputDiv.classList.add("out-list-item");
-            selectedMaterials.append(outputDiv);
-
-            // Output Quantity
-            let p = document.createElement('span');
-            p.innerText = (inputQtyAdd[i].value);
-            outputDiv.append(p);
-
-            // Out Description
-            let q = document.createElement('span');
-            q.innerText = descriptionAdd[i].innerText;
-            outputDiv.append(q);
-
-            // Out Total Weight
-            let r = document.createElement('span');
-            r.classList.add("weight");
-
-            r.innerText = ((inputQtyAdd[i].value * unitWeightAdd[i].innerText)).toFixed(1);
-            // weightKg = parseFloat(weightKg) + parseFloat(r.innerText);
-            outputDiv.append(r);
-          }
-        }
-
-        // Clear all input boxes for quantities
-        for (let j = 0; j < inputQtyAdd.length; j++) {
-          inputQtyAdd[j].value = "";
-        }
-
-        // Calculate Grand Totals
-        const outWeight = document.querySelectorAll('.weight');
-        outWeight.forEach(element => {
-          weightKg = weightKg + parseFloat(element.innerText);
-        });
-        displayWeightDiv.innerText = "";
-        displayWeightDiv.append(`${weightKg.toFixed(1)} >Kg.
-        ${(weightKg * 2.204).toFixed(1)} >lbs.
-        ${(weightKg / 1000).toFixed(1)} >Tons.`);
-      });
+      materialCase();
       break;
     case "1":
-
+      count = 0;
+      scaffoldBoard1_2m.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + "\n");
+        count++;
+      });
+      materialCase();
+      break;
+    case "2":
+      count = 0;
+      scaffoldBoard1_5m.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + "\n");
+        count++;
+      });
+      materialCase();
       break;
     default:
       break;
@@ -247,7 +201,7 @@ selectMaterialCategory.addEventListener("change", (e) => {
 });
 
 // CODE FOR INPUT MATERIALS ABOVE
-// Input Quantity to the Input Screen Below
+// Input Quantity to the Input Screen
 function addNewInputQty(id) {
   const newInput = document.createElement("input");
   newInput.classList.add("qty-add");
@@ -279,4 +233,69 @@ function addNewTotalWeight(totalWeightAdd) {
   totalWeight.classList.add("unit-weight-add");
   totalWeight.innerText = totalWeightAdd;
   listContainer.append(totalWeight);
+}
+
+function materialCase() {
+  //Add Button Query Selector
+  let addItemsButton = document.querySelector(".btn-add");
+
+  // Constants for each element
+  let inputQtyAdd = document.querySelectorAll(".qty-add");
+  let descriptionAdd = document.querySelectorAll(".description-add");
+  let unitWeightAdd = document.querySelectorAll(".unit-weight-add");
+
+
+  // Event listener for the click button
+  addItemsButton.addEventListener("click", (e) => {
+
+    // Make visible the weight screen and the total weights
+    displayWeightDiv.style.visibility = "visible";
+    outputContainer.style.visibility = "visible";
+
+    // Loop through each element based on click add button
+    let weightKg = 0.00;
+
+    for (let i = 0; i < inputQtyAdd.length; i++) {
+
+      if (!(inputQtyAdd[i].value === "" || inputQtyAdd[i].value === "0")) {
+        // Send all values to the console once the input field isn't empty
+        const outputDiv = document.createElement("div");
+        outputDiv.classList.add("out-list-item");
+        selectedMaterials.append(outputDiv);
+
+        // Output Quantity
+        let p = document.createElement('span');
+        p.innerText = (inputQtyAdd[i].value);
+        outputDiv.append(p);
+
+        // Out Description
+        let q = document.createElement('span');
+        q.innerText = descriptionAdd[i].innerText;
+        outputDiv.append(q);
+
+        // Out Total Weight
+        let r = document.createElement('span');
+        r.classList.add("weight");
+
+        r.innerText = ((inputQtyAdd[i].value * unitWeightAdd[i].innerText)).toFixed(1);
+        // weightKg = parseFloat(weightKg) + parseFloat(r.innerText);
+        outputDiv.append(r);
+      }
+    }
+
+    // Clear all input boxes for quantities
+    for (let j = 0; j < inputQtyAdd.length; j++) {
+      inputQtyAdd[j].value = "";
+    }
+
+    // Calculate Grand Totals
+    const outWeight = document.querySelectorAll('.weight');
+    outWeight.forEach(element => {
+      weightKg = weightKg + parseFloat(element.innerText);
+    });
+    displayWeightDiv.innerText = "";
+    displayWeightDiv.append(`${weightKg.toFixed(1)} Kg. =>
+        ${(weightKg * 2.204).toFixed(1)} lbs. =>
+        ${(weightKg / 1000).toFixed(1)} Tons.`);
+  });
 }
