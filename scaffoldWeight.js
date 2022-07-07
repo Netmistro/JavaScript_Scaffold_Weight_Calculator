@@ -105,40 +105,119 @@ const scaffoldBoard1_2m = [
 const scaffoldBoard1_5m = [
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 13'",
-    weight: "20.0",
+    weight: "19.0",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 10'",
-    weight: "15.4",
+    weight: "14.62",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 08'",
-    weight: "12.35",
+    weight: "11.69",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 06'",
-    weight: "9.25",
+    weight: "8.77",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 04'",
-    weight: "6.16",
+    weight: "5.84",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 02'",
-    weight: "3.08",
+    weight: "2.92",
     group: "Scaffold Boards",
   },
   {
     name: "Scaffold Board BS EN 2482 1.5m Support MG - 01'",
-    weight: "1.54",
+    weight: "1.46",
     group: "Scaffold Boards",
   },
 ];
+
+// Define the variables to populate the TUFF Steel Orange Feet Ladders here
+const ladderTuffSteel = [
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 8.0M",
+    weight: "33.4",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 7.1M",
+    weight: "29.4",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 6.3M",
+    weight: "25.3",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 5.2M",
+    weight: "15.9",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 4.3M",
+    weight: "13.1",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 3.8M",
+    weight: "10.2",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Tuff Steel EN131 (Orange Feet) - 3.5M",
+    weight: "9.30",
+    group: "Scaffold Ladder",
+  },
+];
+
+// Define the variables to populate the TUFF Steel Orange Feet Ladders here
+const ladderAluminum = [
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 8.0M",
+    weight: "20.0",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 7.0M",
+    weight: "15.4",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 6.0M",
+    weight: "12.35",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 5.0M",
+    weight: "9.25",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 4.0M",
+    weight: "6.16",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 3.5M",
+    weight: "3.08",
+    group: "Scaffold Ladder",
+  },
+  {
+    name: "Aluminum BS Class 1 (Black Feet) - 3.0M",
+    weight: "1.54",
+    group: "Scaffold Ladder",
+  },
+];
+
 // Add constants here
 const selectMaterialCategory = document.getElementById("material-dropdown");
 const listContainer = document.getElementById("list-container");
@@ -188,6 +267,26 @@ selectMaterialCategory.addEventListener("change", (e) => {
     case "2":
       count = 0;
       scaffoldBoard1_5m.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + "\n");
+        count++;
+      });
+      materialCase();
+      break;
+    case "3":
+      count = 0;
+      ladderTuffSteel.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + "\n");
+        count++;
+      });
+      materialCase();
+      break;
+    case "4":
+      count = 0;
+      ladderAluminum.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
         addNewUnitWeight(element.weight + "\n");
