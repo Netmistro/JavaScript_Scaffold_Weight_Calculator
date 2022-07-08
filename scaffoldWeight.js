@@ -224,7 +224,12 @@ const listContainer = document.getElementById('list-container');
 const outputContainer = document.querySelector('.output-container');
 const selectedMaterials = document.querySelectorAll('.selected-material')[0];
 const displayWeightDiv = document.querySelector('.total-weight');
+const restartButton = document.querySelector('.btn-restart');
 
+// Reload Browser
+restartButton.addEventListener('click', (e) => {
+  window.location.reload();
+});
 // Onload hide the material container
 window.onload = (e) => {
   listContainer.style.visibility = 'hidden';
@@ -334,6 +339,17 @@ function addNewTotalWeight(totalWeightAdd) {
   listContainer.append(totalWeight);
 }
 
+// Format out Weights to 2 DP and commas for thousands
+function formatOutputWeight(myweight) {
+  if (myweight < 1.00) {
+    let myNewOutputWeight = (new Intl.NumberFormat('en-US').format(myweight.toFixed(4)));
+    return myNewOutputWeight;
+  } else {
+    let myNewOutputWeight = (new Intl.NumberFormat('en-US').format(myweight.toFixed(1)));
+    return myNewOutputWeight;
+  }
+}
+
 function materialCase() {
   //Add Button Query Selector
   let addItemsButton = document.querySelector('.btn-add');
@@ -375,7 +391,7 @@ function materialCase() {
 
         r.innerText = (
           inputQtyAdd[i].value * unitWeightAdd[i].innerText
-        ).toFixed(1);
+        ).toFixed(2);
         // weightKg = parseFloat(weightKg) + parseFloat(r.innerText);
         outputDiv.append(r);
       }
@@ -386,16 +402,15 @@ function materialCase() {
       inputQtyAdd[j].value = '';
     }
 
-    // Calculate Grand Totals
+    // Calculate Grand Totals and format outputs
     const outWeight = document.querySelectorAll('.weight');
     outWeight.forEach((element) => {
       weightKg = weightKg + parseFloat(element.innerText);
     });
     displayWeightDiv.innerText = '';
-    displayWeightDiv.append(`${weightKg.toLocaleString(('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1}))} Kg. =>
-        ${(weightKg * 2.204).toLocaleString(('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1}))} lbs. =>
-        ${(weightKg / 1000).toLocaleString(('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1}))} tons`);
+    console.log(weightKg);
+    displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg. =>
+        ${formatOutputWeight(weightKg * 2.204)} lbs. =>
+        ${formatOutputWeight(weightKg / 1000)} tons`);
   });
 }
-
-console.log(new Intl.NumberFormat('en-US').format(123544.2333.toFixed(2))); 
