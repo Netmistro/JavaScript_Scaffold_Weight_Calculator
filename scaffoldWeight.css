@@ -7,11 +7,11 @@
 }
 
 :root {
-    --input-bg-color: #ff4c4c;
-    --output-bg-color: orange;
-    --button-bg-Color: violet;
-    --ouputWeight-bg-color: yellow;
-    --body-bg-color: linear-gradient(45deg, rgba(131, 58, 180, 1) 0%, rgba(252, 176, 69, 1) 100%);
+    --input-bg-color: #eb2135;
+    --output-bg-color: #ef612f;
+    --button-bg-Color: #8557a3;
+    --ouputWeight-bg-color: #fed42a;
+    --body-bg-color: #0000cc;
 }
 
 /* General style */
@@ -49,6 +49,7 @@ img {
     outline: none;
     border: none;
     border-radius: 1rem;
+    box-shadow: 5px -5px 10px 0px rgba(0, 0, 0, 0.5)
 }
 
 /* Bottom Container CSS */
@@ -62,12 +63,13 @@ img {
     outline: none;
     border: none;
     border-radius: 1rem;
+    box-shadow: 5px -5px 10px 0px rgba(0, 0, 0, 0.5)
 }
 
 /* Refresh the Browser hover */
 .btn-restart:hover {
     background-color: whitesmoke;
-    color: violet;
+    color: black;
     width: 4.2rem;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
@@ -83,7 +85,7 @@ img {
 /* The only Button on the form */
 button {
     background-color: var(--button-bg-Color);
-    color: black;
+    color: white;
     padding: 0.5rem;
     outline: none;
     border: none;
@@ -172,6 +174,14 @@ span {
 /* Hide unit weight */
 .unit-weight-add {
     color: var(--input-bg-color);
+}
+
+/* Author */
+.author {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 /* Media queries */

@@ -179,7 +179,7 @@ const ladderTuffSteel = [
   },
 ];
 
-// Define the variables to populate the TUFF Steel Orange Feet Ladders here
+// Define the variables to populate the Aluminum Ladders here
 const ladderAluminum = [
   {
     name: 'Aluminum BS Class 1 (Black Feet) - 8.0M',
@@ -215,6 +215,163 @@ const ladderAluminum = [
     name: 'Aluminum BS Class 1 (Black Feet) - 3.0M',
     weight: '1.54',
     group: 'Scaffold Ladder',
+  },
+];
+
+// Define the variables to populate the Cuplock Standards & Ledgers here
+const cuplockStandardsAndLedgers = [
+  {
+    name: 'Cuplock Standard 3.0m - 10\'',
+    weight: '16.60',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Standard 2.5m - 8\'',
+    weight: '13.28',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Standard 2.0m - 6\'',
+    weight: '9.96',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Standard 1.52m - 5\'',
+    weight: '8.30',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Standard 1.0m - 3\'',
+    weight: '5.80',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 3.0m - 10\'',
+    weight: '11.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 2.5m - 8\'',
+    weight: '5.80',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 1.8m - 6\'',
+    weight: '9.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 1.3m - 4\'',
+    weight: '4.90',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 0.9m - 3\'',
+    weight: '3.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 0.8m - 2\'-6"',
+    weight: '4.90',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Ledger 0.6m - 2\'-0"',
+    weight: '2.50',
+    group: 'Cuplock',
+  },
+];
+
+// Define the variables to populate the Cuplock Intermediate & Brace here
+const cuplockIntermediateAndBraces = [
+  {
+    name: 'Cuplock Intermediate 2.5m - 10\'',
+    weight: '16.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Intermediate 1.8m - 8\'',
+    weight: '7.30',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Intermediate 1.3m - 4\'',
+    weight: '5.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Intermediate 0.9m - 3\'',
+    weight: '4.13',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Brace 3.0m x 2.0m - 10\'',
+    weight: '14.38',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Brace 2.5m x 2.0m - 8\'',
+    weight: '11.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Brace 1.8m x 2.0m - 6\'',
+    weight: '9.80',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Brace 1.8m x 1.5m - 5\'',
+    weight: '8.17',
+    group: 'Cuplock',
+  },
+];
+
+// Define the variables to populate the Cuplock Omega Transom & Timber Battens here
+const cuplockOmegaTransomAndBatten = [
+  {
+    name: 'Cuplock Omega Transom 2.5m - 10\'',
+    weight: '24.80',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Omega Transom 1.8m - 6\'',
+    weight: '10.00',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Omega Transom 1.3m - 4\'',
+    weight: '7.20',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Timber Batten 2.5m - 10\'',
+    weight: '18.00',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Timber Batten 1.8m - 6\'',
+    weight: '13.00',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Timber Batten 1.3m - 4\'',
+    weight: '9.50',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Steel Batten 2.5m - 10\'',
+    weight: '12.40',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Steel Batten 1.8m - 6\'',
+    weight: '9.10',
+    group: 'Cuplock',
+  },
+  {
+    name: 'Cuplock Steel Batten 1.3m - 4\'',
+    weight: '6.70',
+    group: 'Cuplock',
   },
 ];
 
@@ -299,6 +456,36 @@ selectMaterialCategory.addEventListener('change', (e) => {
       });
       materialCase();
       break;
+    case '5':
+      count = 0;
+      cuplockStandardsAndLedgers.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '6':
+      count = 0;
+      cuplockIntermediateAndBraces.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '7':
+      count = 0;
+      cuplockOmegaTransomAndBatten.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
     default:
       break;
   }
@@ -361,15 +548,17 @@ function materialCase() {
 
   // Event listener for the click button
   addItemsButton.addEventListener('click', (e) => {
-    // Make visible the weight screen and the total weights
-    displayWeightDiv.style.visibility = 'visible';
-    outputContainer.style.visibility = 'visible';
 
     // Loop through each element based on click add button
     let weightKg = 0.0;
 
     for (let i = 0; i < inputQtyAdd.length; i++) {
       if (!(inputQtyAdd[i].value === '' || inputQtyAdd[i].value === '0')) {
+
+        // Make visible the weight screen and the total weights
+        displayWeightDiv.style.visibility = 'visible';
+        outputContainer.style.visibility = 'visible';
+
         // Send all values to the console once the input field isn't empty
         const outputDiv = document.createElement('div');
         outputDiv.classList.add('out-list-item');
