@@ -572,130 +572,21 @@ export const lvlOSHABoards = [
     },
 ];
 
-// Define the variables to populate the Scaffold Fittings here
-export const scaffoldFittings = [
-    {
-        name: 'Base Plate - BS 1139, EN74:1988 - 150mm x 150mm x 5mm',
-        weight: '0.90',
-        group: 'Fittings',
-    },
-    {
-        name: 'Base Plate Tube - 150mm x 150mm x 2mm',
-        weight: '0.40',
-        group: 'Fittings',
-    },
-    {
-        name: 'Base Plate Pressed - 150mm x 150mm x 2mm',
-        weight: '0.40',
-        group: 'Fittings',
-    },
-    {
-        name: 'Drop Forged Putlog Coupler - BS 1139.2.2',
-        weight: '0.60',
-        group: 'Fittings',
-    },
-    {
-        name: 'Drop Forged Double Coupler - EN74-A',
-        weight: '1.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Drop Forged Swivel Coupler - BS 1139:1991, EN74-A',
-        weight: '1.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Pressed Putlog Coupler EN74-1',
-        weight: '0.60',
-        group: 'Fittings',
-    },
-    {
-        name: 'Pressed Steel Double Coupler BS 1139:1991 EN74-A',
-        weight: '1.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Pressed Steel Swivel Coupler BS 1139:1991 EN74-A',
-        weight: '1.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Pressed Sleeve EN74-18',
-        weight: '1.10',
-        group: 'Fittings',
-    },
-    {
-        name: 'Pressed Joint Pin BS 1139.2.2',
-        weight: '0.80',
-        group: 'Fittings',
-    },
-    {
-        name: 'Girder Coupler/Beam Clamp AS 1576.1',
-        weight: '1.50',
-        group: 'Fittings',
-    },
-    {
-        name: 'Band & Plate',
-        weight: '2.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Board Clamp',
-        weight: '0.60',
-        group: 'Fittings',
-    },
-    {
-        name: 'Limpet Clamp',
-        weight: '0.60',
-        group: 'Fittings',
-    },
-    {
-        name: 'ToeBoard Clip',
-        weight: '0.20',
-        group: 'Fittings',
-    },
-    {
-        name: 'Putlog Head',
-        weight: '0.40',
-        group: 'Fittings',
-    },
-    {
-        name: 'External Hook Coupler',
-        weight: '1.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Internal Hook Coupler',
-        weight: '0.80',
-        group: 'Fittings',
-    },
-    {
-        name: 'Oyster Coupler',
-        weight: '0.70',
-        group: 'Fittings',
-    },
-    {
-        name: 'Pressed Steel Roofing Coupler',
-        weight: '1.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Alloy Double Coupler',
-        weight: '2.00',
-        group: 'Fittings',
-    },
-    {
-        name: 'Alloy Swivel Coupler',
-        weight: '2.00',
-        group: 'Fittings',
-    },
-];
-
 // Define the variables to populate the Scaffold Accessories here
 export const scaffoldAccessories = [
     {
-        name: '6 Ton Swivel BAse Jack',
+        name: '6 Ton Swivel Base Jack BS 1139 - 12" ',
         weight: '4.70',
+        group: 'Accessory',
+    },
+    {
+        name: '6 Ton Base Jack BS 1139 - 12" ',
+        weight: '4.50',
+        group: 'Accessory',
+    },
+    {
+        name: '4 Ton Base Jack BS 1139 - 12"',
+        weight: '3.50',
         group: 'Accessory',
     },
     {
@@ -762,5 +653,128 @@ export const scaffoldAccessories = [
         name: 'Universal Friction Clamp - Chain per meter',
         weight: '2.3',
         group: 'Accessory',
+    },
+];
+
+// Define the variables to populate the Scaffold Fittings Regular ones here
+export const scaffoldFittings1 = [
+    {
+        name: 'Base Plate - BS 1139, EN74:1988 - 150mm x 150mm x 5mm',
+        weight: '0.90',
+        group: 'Fittings',
+    },
+    {
+        name: 'Base Plate Tube - 150mm x 150mm x 2mm',
+        weight: '0.40',
+        group: 'Fittings',
+    },
+    {
+        name: 'Base Plate Pressed - 150mm x 150mm x 2mm',
+        weight: '0.40',
+        group: 'Fittings',
+    },
+    {
+        name: 'Drop Forged Putlog Coupler - BS 1139.2.2',
+        weight: '0.60',
+        group: 'Fittings',
+    },
+    {
+        name: 'Drop Forged Double Coupler - EN74-A',
+        weight: '1.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Drop Forged Swivel Coupler - BS 1139:1991, EN74-A',
+        weight: '1.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Pressed Putlog Coupler EN74-1',
+        weight: '0.60',
+        group: 'Fittings',
+    },
+    {
+        name: 'Pressed Steel Double Coupler BS 1139:1991 EN74-A',
+        weight: '1.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Pressed Steel Swivel Coupler BS 1139:1991 EN74-A',
+        weight: '1.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Pressed Sleeve EN74-18',
+        weight: '1.10',
+        group: 'Fittings',
+    },
+    {
+        name: 'Girder Coupler/Beam Clamp AS 1576.1',
+        weight: '1.50',
+        group: 'Fittings',
+    },
+    {
+        name: 'Band & Plate',
+        weight: '2.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Board Clamp',
+        weight: '0.60',
+        group: 'Fittings',
+    },
+    {
+        name: 'Limpet Clamp',
+        weight: '0.60',
+        group: 'Fittings',
+    },
+    {
+        name: 'ToeBoard Clip',
+        weight: '0.20',
+        group: 'Fittings',
+    },
+];
+
+// Define the variables to populate the Scaffold Fittings Special ones here
+export const scaffoldFittings2 = [
+    {
+        name: 'Pressed Joint Pin BS 1139.2.2',
+        weight: '0.80',
+        group: 'Fittings',
+    },
+    {
+        name: 'Putlog Head',
+        weight: '0.40',
+        group: 'Fittings',
+    },
+    {
+        name: 'External Hook Coupler',
+        weight: '1.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Internal Hook Coupler',
+        weight: '0.80',
+        group: 'Fittings',
+    },
+    {
+        name: 'Oyster Coupler',
+        weight: '0.70',
+        group: 'Fittings',
+    },
+    {
+        name: 'Pressed Steel Roofing Coupler',
+        weight: '1.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Alloy Double Coupler',
+        weight: '2.00',
+        group: 'Fittings',
+    },
+    {
+        name: 'Alloy Swivel Coupler',
+        weight: '2.00',
+        group: 'Fittings',
     },
 ];

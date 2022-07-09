@@ -1,4 +1,4 @@
-import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings } from "./scaffoldWeightMaterials.js";
+import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings1, scaffoldFittings2 } from "./scaffoldWeightMaterials.js";
 
 // Add constants here
 const selectMaterialCategory = document.getElementById('material-dropdown');
@@ -163,7 +163,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       break;
     case '13':
       var count = 0;
-      scaffoldFittings.forEach((element) => {
+      scaffoldFittings1.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
         addNewUnitWeight(element.weight + '\n');
@@ -172,6 +172,16 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '14':
+      var count = 0;
+      scaffoldFittings2.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '15':
       var count = 0;
       scaffoldAccessories.forEach((element) => {
         addNewInputQty(count);
