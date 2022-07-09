@@ -1,4 +1,5 @@
-import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings1, scaffoldFittings2 } from "./scaffoldWeightMaterials.js";
+// Import from another file all the data created for the different material categories
+import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings1, scaffoldFittings2, formworkProps } from "./scaffoldWeightMaterials.js";
 
 // Add constants here
 const selectMaterialCategory = document.getElementById('material-dropdown');
@@ -32,164 +33,55 @@ selectMaterialCategory.addEventListener('change', (e) => {
   // Switch the case depending on the selected and display the group
   switch (e.target.value) {
     case '0':
-      var count = 0;
-      scaffoldTubes.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(scaffoldTubes);
       break;
     case '1':
-      var count = 0;
-      scaffoldBoard1_2m.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(highYieldTubes);
       break;
     case '2':
-      var count = 0;
-      scaffoldBoard1_5m.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(aluminumTubes);
       break;
     case '3':
-      var count = 0;
-      ladderTuffSteel.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(scaffoldBoard1_2m);
       break;
     case '4':
-      var count = 0;
-      ladderAluminum.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(scaffoldBoard1_5m);
       break;
     case '5':
-      var count = 0;
-      cuplockStandardsAndLedgers.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(lvlOSHABoards);
       break;
     case '6':
-      var count = 0;
-      cuplockIntermediateAndBraces.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(ladderTuffSteel);
       break;
     case '7':
-      var count = 0;
-      cuplockOmegaTransomAndBatten.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(ladderAluminum);
       break;
     case '8':
-      var count = 0;
-      ladderAndAlloyBeams.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(cuplockStandardsAndLedgers);
       break;
     case '9':
-      var count = 0;
-      alloyAndAsterix.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(cuplockIntermediateAndBraces);
       break;
     case '10':
-      var count = 0;
-      aluminumTubes.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(cuplockOmegaTransomAndBatten);
       break;
     case '11':
-      var count = 0;
-      highYieldTubes.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(ladderAndAlloyBeams);
       break;
     case '12':
-      var count = 0;
-      lvlOSHABoards.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(alloyAndAsterix);
       break;
     case '13':
-      var count = 0;
-      scaffoldFittings1.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(scaffoldFittings1);
       break;
     case '14':
-      var count = 0;
-      scaffoldFittings2.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(scaffoldFittings2);
       break;
     case '15':
-      var count = 0;
-      scaffoldAccessories.forEach((element) => {
-        addNewInputQty(count);
-        addNewSpanDescription(element.name);
-        addNewUnitWeight(element.weight + '\n');
-        count++;
-      });
-      materialCase();
+      formatInputTable(formworkProps);
+      break;
+    case '16':
+      formatInputTable(scaffoldAccessories);
       break;
     default:
       break;
@@ -240,6 +132,18 @@ function formatOutputWeight(myweight) {
     let myNewOutputWeight = (new Intl.NumberFormat('en-US').format(myweight.toFixed(1)));
     return myNewOutputWeight;
   }
+}
+
+// Function to include in the switch statement to format the input form
+function formatInputTable(materialCategory) {
+  var count = 0;
+  materialCategory.forEach((element) => {
+    addNewInputQty(count);
+    addNewSpanDescription(element.name);
+    addNewUnitWeight(element.weight + '\n');
+    count++;
+  });
+  materialCase();
 }
 
 function materialCase() {
@@ -304,6 +208,6 @@ function materialCase() {
     displayWeightDiv.innerText = '';
     displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg. =>
         ${formatOutputWeight(weightKg * 2.204)} lbs. =>
-        ${formatOutputWeight(weightKg / 1000)} tons`);
+        ${formatOutputWeight(weightKg / 1000.00)} tons`);
   });
 }

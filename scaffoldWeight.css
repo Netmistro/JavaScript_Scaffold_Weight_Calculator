@@ -21,7 +21,7 @@ body {
 }
 
 img {
-    width: 4rem;
+    width: 6rem;
 }
 
 /* Main Container CSS */
@@ -34,6 +34,7 @@ img {
     min-height: 100vh;
     color: white;
     background: var(--body-bg-color);
+    font-size: small;
 }
 
 /* Top Container CSS */
@@ -93,7 +94,7 @@ button {
     border-radius: 0.5rem;
     margin: 0.1rem;
     cursor: pointer;
-    width: 4rem;
+    width: 5rem;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -180,9 +181,14 @@ span {
 /* Author */
 .author {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    padding: 0.5rem;
+}
+
+.developer {
+    font-size: xx-small;
 }
 
 /* Media queries */
@@ -198,6 +204,7 @@ span {
         color: white;
         background: var(--body-bg-color);
         margin: 0.25rem;
+        font-size: smaller;
     }
 
     .material-selector {
@@ -208,5 +215,19 @@ span {
 
     select {
         width: 20rem;
+        font-size: smaller;
+    }
+
+    button {
+        font-size: smaller;
+        width: 4rem;
+    }
+
+    img {
+        width: 2rem;
+    }
+
+    .developer {
+        visibility: hidden;
     }
 }

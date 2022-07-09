@@ -344,18 +344,18 @@ export const cuplockOmegaTransomAndBatten = [
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Steel Batten 2.5m - 10\'',
-        weight: '12.40',
+        name: 'Cuplock Interlocking Steel Plank 2.5m - 10\'',
+        weight: '17.82',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Steel Batten 1.8m - 6\'',
-        weight: '9.10',
+        name: 'Cuplock Interlocking Steel Plank 1.8m - 6\'',
+        weight: '13.76',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Steel Batten 1.3m - 4\'',
-        weight: '6.70',
+        name: 'Cuplock Interlocking Steel Plank 1.3m - 4\'',
+        weight: '9.80',
         group: 'Cuplock',
     },
 ];
@@ -566,9 +566,49 @@ export const highYieldTubes = [
 // Define the variables to populate the LVL OSHA Boards here
 export const lvlOSHABoards = [
     {
-        name: 'Cuplock Omega Transom 2.5m - 10\'',
-        weight: '24.80',
-        group: 'Cuplock',
+        name: 'Scaffold Board LVL OSHA - 38mm x 225mm (3.9M) - 13\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 38mm x 225mm (3.0M) - 10\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 38mm x 225mm (2.5M) - 8\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 42mm x 225mm (3.9M) - 13\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 42mm x 225mm (3.0M) - 10\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 42mm x 225mm (2.5M) - 8\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 42mm x 250mm (3.9M) - 13\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 42mm x 250mm (3.0M) - 10\'',
+        weight: '0',
+        group: 'LVL Boards',
+    },
+    {
+        name: 'Scaffold Board LVL OSHA - 42mm x 250mm (2.5M) - 8\'',
+        weight: '0',
+        group: 'LVL Boards',
     },
 ];
 
@@ -651,7 +691,12 @@ export const scaffoldAccessories = [
     },
     {
         name: 'Universal Friction Clamp - Chain per meter',
-        weight: '2.3',
+        weight: '2.30',
+        group: 'Accessory',
+    },
+    {
+        name: 'Scaffold Stillage (4 Post Panllet)',
+        weight: '28.00',
         group: 'Accessory',
     },
 ];
@@ -776,5 +821,79 @@ export const scaffoldFittings2 = [
         name: 'Alloy Swivel Coupler',
         weight: '2.00',
         group: 'Fittings',
+    },
+];
+
+// Define the variables to populate the Formwork - Props and Struts here
+export const formworkProps = [
+    {
+        name: 'Adj. Prop Size 0 (1.041m-1.829m)(3\'-5" - 6\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Adj. Prop Size 1 (1.1753m-3.124m)(3\'-10" - 10\'-3")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Adj. Prop Size 2 (1.981m-3.352m)(6\'-6" - 11\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Adj. Prop Size 3 (2.590m-3.962m)(8\'-6" - 13\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Adj. Prop Size 4 (3.200m-4.876m)(10\'-6" - 16\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Push/Pull Prop Size 0 (1.14m-1.829m)(3\'-9" - 6\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Push/Pull Prop Size 1 (1.85m-3.124m)(6\'-1" - 10\'3")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Push/Pull Prop Size 2 (2.08m-3.352m)(6\'-10" - 11\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Push/Pull Prop Size 3 (2.69m-3.962m)(8\'-10" - 13\'-0")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Push/Pull Prop Size 4 (3.35m-4.954m)(11\'-0" - 16\'-3")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Trench Strut Size 0 (0.32m-0.47m)(1\'-0 - 1\'-6"")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Trench Strut Size 1 (0.49m-0.73m)(1\'-7" - 2\'-5")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Trench Strut Size 2 (0.69m-1.09m)(2\'3" - 3\'7")',
+        weight: '0',
+        group: 'Formwork',
+    },
+    {
+        name: 'Trench Strut Size 3 (1.03m-1.73m)(3\'-4" - 5\'-8")',
+        weight: '0',
+        group: 'Formwork',
     },
 ];
