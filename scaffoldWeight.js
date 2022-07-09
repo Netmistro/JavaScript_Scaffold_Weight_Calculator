@@ -1,379 +1,4 @@
-// Define the variables to populate the Scaffold Tubes table here
-const scaffoldTubes = [
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 21'",
-    weight: '28.98',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 20'",
-    weight: '27.60',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 18'",
-    weight: '24.84',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 16'",
-    weight: '22.08',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 14'",
-    weight: '19.32',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 12'",
-    weight: '16.56',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 10'",
-    weight: '13.80',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 08'",
-    weight: '11.04',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 06'",
-    weight: '8.28',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 04'",
-    weight: '5.52',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 02'",
-    weight: '2.76',
-    group: 'Scaffold Tube',
-  },
-  {
-    name: "Scaffold Steel Tube (4.0mm) - 01'",
-    weight: '1.38',
-    group: 'Scaffold Tube',
-  },
-];
-
-// Define the variables to populate the Scaffold Boards 1.2m table here
-const scaffoldBoard1_2m = [
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 13'",
-    weight: '20.0',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 10'",
-    weight: '15.4',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 08'",
-    weight: '12.35',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 06'",
-    weight: '9.25',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 04'",
-    weight: '6.16',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 02'",
-    weight: '3.08',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.2m Support MG - 01'",
-    weight: '1.54',
-    group: 'Scaffold Boards',
-  },
-];
-
-// Define the variables to populate the Scaffold Boards 1.5m table here
-const scaffoldBoard1_5m = [
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 13'",
-    weight: '19.0',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 10'",
-    weight: '14.62',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 08'",
-    weight: '11.69',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 06'",
-    weight: '8.77',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 04'",
-    weight: '5.84',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 02'",
-    weight: '2.92',
-    group: 'Scaffold Boards',
-  },
-  {
-    name: "Scaffold Board BS EN 2482 1.5m Support MG - 01'",
-    weight: '1.46',
-    group: 'Scaffold Boards',
-  },
-];
-
-// Define the variables to populate the TUFF Steel Orange Feet Ladders here
-const ladderTuffSteel = [
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 8.0M',
-    weight: '33.4',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 7.1M',
-    weight: '29.4',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 6.3M',
-    weight: '25.3',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 5.2M',
-    weight: '15.9',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 4.3M',
-    weight: '13.1',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 3.8M',
-    weight: '10.2',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Tuff Steel EN131 (Orange Feet) - 3.5M',
-    weight: '9.30',
-    group: 'Scaffold Ladder',
-  },
-];
-
-// Define the variables to populate the Aluminum Ladders here
-const ladderAluminum = [
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 8.0M',
-    weight: '20.0',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 7.0M',
-    weight: '15.4',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 6.0M',
-    weight: '12.35',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 5.0M',
-    weight: '9.25',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 4.0M',
-    weight: '6.16',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 3.5M',
-    weight: '3.08',
-    group: 'Scaffold Ladder',
-  },
-  {
-    name: 'Aluminum BS Class 1 (Black Feet) - 3.0M',
-    weight: '1.54',
-    group: 'Scaffold Ladder',
-  },
-];
-
-// Define the variables to populate the Cuplock Standards & Ledgers here
-const cuplockStandardsAndLedgers = [
-  {
-    name: 'Cuplock Standard 3.0m - 10\'',
-    weight: '16.60',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Standard 2.5m - 8\'',
-    weight: '13.28',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Standard 2.0m - 6\'',
-    weight: '9.96',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Standard 1.52m - 5\'',
-    weight: '8.30',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Standard 1.0m - 3\'',
-    weight: '5.80',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 3.0m - 10\'',
-    weight: '11.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 2.5m - 8\'',
-    weight: '5.80',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 1.8m - 6\'',
-    weight: '9.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 1.3m - 4\'',
-    weight: '4.90',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 0.9m - 3\'',
-    weight: '3.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 0.8m - 2\'-6"',
-    weight: '4.90',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Ledger 0.6m - 2\'-0"',
-    weight: '2.50',
-    group: 'Cuplock',
-  },
-];
-
-// Define the variables to populate the Cuplock Intermediate & Brace here
-const cuplockIntermediateAndBraces = [
-  {
-    name: 'Cuplock Intermediate 2.5m - 10\'',
-    weight: '16.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Intermediate 1.8m - 8\'',
-    weight: '7.30',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Intermediate 1.3m - 4\'',
-    weight: '5.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Intermediate 0.9m - 3\'',
-    weight: '4.13',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Brace 3.0m x 2.0m - 10\'',
-    weight: '14.38',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Brace 2.5m x 2.0m - 8\'',
-    weight: '11.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Brace 1.8m x 2.0m - 6\'',
-    weight: '9.80',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Brace 1.8m x 1.5m - 5\'',
-    weight: '8.17',
-    group: 'Cuplock',
-  },
-];
-
-// Define the variables to populate the Cuplock Omega Transom & Timber Battens here
-const cuplockOmegaTransomAndBatten = [
-  {
-    name: 'Cuplock Omega Transom 2.5m - 10\'',
-    weight: '24.80',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Omega Transom 1.8m - 6\'',
-    weight: '10.00',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Omega Transom 1.3m - 4\'',
-    weight: '7.20',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Timber Batten 2.5m - 10\'',
-    weight: '18.00',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Timber Batten 1.8m - 6\'',
-    weight: '13.00',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Timber Batten 1.3m - 4\'',
-    weight: '9.50',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Steel Batten 2.5m - 10\'',
-    weight: '12.40',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Steel Batten 1.8m - 6\'',
-    weight: '9.10',
-    group: 'Cuplock',
-  },
-  {
-    name: 'Cuplock Steel Batten 1.3m - 4\'',
-    weight: '6.70',
-    group: 'Cuplock',
-  },
-];
+import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings } from "./scaffoldWeightMaterials.js";
 
 // Add constants here
 const selectMaterialCategory = document.getElementById('material-dropdown');
@@ -407,7 +32,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
   // Switch the case depending on the selected and display the group
   switch (e.target.value) {
     case '0':
-      count = 0;
+      var count = 0;
       scaffoldTubes.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -417,7 +42,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '1':
-      count = 0;
+      var count = 0;
       scaffoldBoard1_2m.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -427,7 +52,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '2':
-      count = 0;
+      var count = 0;
       scaffoldBoard1_5m.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -437,7 +62,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '3':
-      count = 0;
+      var count = 0;
       ladderTuffSteel.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -447,7 +72,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '4':
-      count = 0;
+      var count = 0;
       ladderAluminum.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -457,7 +82,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '5':
-      count = 0;
+      var count = 0;
       cuplockStandardsAndLedgers.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -467,7 +92,7 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '6':
-      count = 0;
+      var count = 0;
       cuplockIntermediateAndBraces.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
@@ -477,8 +102,78 @@ selectMaterialCategory.addEventListener('change', (e) => {
       materialCase();
       break;
     case '7':
-      count = 0;
+      var count = 0;
       cuplockOmegaTransomAndBatten.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '8':
+      var count = 0;
+      ladderAndAlloyBeams.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '9':
+      var count = 0;
+      alloyAndAsterix.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '10':
+      var count = 0;
+      aluminumTubes.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '11':
+      var count = 0;
+      highYieldTubes.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '12':
+      var count = 0;
+      lvlOSHABoards.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '13':
+      var count = 0;
+      scaffoldFittings.forEach((element) => {
+        addNewInputQty(count);
+        addNewSpanDescription(element.name);
+        addNewUnitWeight(element.weight + '\n');
+        count++;
+      });
+      materialCase();
+      break;
+    case '14':
+      var count = 0;
+      scaffoldAccessories.forEach((element) => {
         addNewInputQty(count);
         addNewSpanDescription(element.name);
         addNewUnitWeight(element.weight + '\n');
@@ -597,7 +292,6 @@ function materialCase() {
       weightKg = weightKg + parseFloat(element.innerText);
     });
     displayWeightDiv.innerText = '';
-    console.log(weightKg);
     displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg. =>
         ${formatOutputWeight(weightKg * 2.204)} lbs. =>
         ${formatOutputWeight(weightKg / 1000)} tons`);
