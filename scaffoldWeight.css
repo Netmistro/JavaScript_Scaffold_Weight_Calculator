@@ -65,7 +65,7 @@ img {
     outline: none;
     border: none;
     border-radius: 1rem;
-    box-shadow: 5px -5px 10px 0px rgba(0, 0, 0, 0.5)
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* Refresh the Browser hover */
@@ -73,7 +73,7 @@ img {
     background-color: whitesmoke;
     color: black;
     width: 4.2rem;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* Add materials button hover */
@@ -204,7 +204,7 @@ span {
         color: white;
         background: var(--body-bg-color);
         margin: 0.25rem;
-        font-size: smaller;
+        font-size: x-small;
     }
 
     .material-selector {
@@ -215,11 +215,11 @@ span {
 
     select {
         width: 20rem;
-        font-size: smaller;
+        font-size: small;
     }
 
     button {
-        font-size: smaller;
+        font-size: small;
         width: 4rem;
     }
 

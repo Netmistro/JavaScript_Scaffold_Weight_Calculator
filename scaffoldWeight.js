@@ -123,7 +123,7 @@ function addNewTotalWeight(totalWeightAdd) {
   listContainer.append(totalWeight);
 }
 
-// Format out Weights to 2 DP and commas for thousands
+// Format output Weights to 2 DP and commas for thousands
 function formatOutputWeight(myweight) {
   if (myweight < 1.00) {
     let myNewOutputWeight = (new Intl.NumberFormat('en-US').format(myweight.toFixed(4)));
@@ -146,6 +146,7 @@ function formatInputTable(materialCategory) {
   materialCase();
 }
 
+// Function to add the materials based on a switch statement
 function materialCase() {
   //Add Button Query Selector
   let addItemsButton = document.querySelector('.btn-add');
@@ -157,41 +158,63 @@ function materialCase() {
 
   // Event listener for the click button
   addItemsButton.addEventListener('click', (e) => {
+    populateOutputContainer();
+  });
 
+  // Event listener for the Return Key and Escape Key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      populateOutputContainer();
+    } if (e.key === 'Escape') {
+      window.location.reload();
+    }
+  });
+
+  // Function for Pupulating the ouput Container
+  function populateOutputContainer() {
     // Loop through each element based on click add button
     let weightKg = 0.0;
+
+
 
     for (let i = 0; i < inputQtyAdd.length; i++) {
       if (!(inputQtyAdd[i].value === '' || inputQtyAdd[i].value === '0')) {
 
-        // Make visible the weight screen and the total weights
-        displayWeightDiv.style.visibility = 'visible';
-        outputContainer.style.visibility = 'visible';
+        // Cater for negative values and make them zero
+        if (inputQtyAdd[i].value < '0') {
+          inputQtyAdd[i].value === '0';
+        } else {
 
-        // Send all values to the console once the input field isn't empty
-        const outputDiv = document.createElement('div');
-        outputDiv.classList.add('out-list-item');
-        selectedMaterials.append(outputDiv);
+          // Make visible the weight screen and the total weights
+          displayWeightDiv.style.visibility = 'visible';
+          outputContainer.style.visibility = 'visible';
 
-        // Output Quantity
-        let p = document.createElement('span');
-        p.innerText = inputQtyAdd[i].value;
-        outputDiv.append(p);
+          // Send all values to the console once the input field isn't empty
+          const outputDiv = document.createElement('div');
+          outputDiv.classList.add('out-list-item');
+          selectedMaterials.append(outputDiv);
 
-        // Out Description
-        let q = document.createElement('span');
-        q.innerText = descriptionAdd[i].innerText;
-        outputDiv.append(q);
+          // Output Quantity
+          let p = document.createElement('span');
+          p.innerText = inputQtyAdd[i].value;
+          outputDiv.append(p);
 
-        // Out Total Weight
-        let r = document.createElement('span');
-        r.classList.add('weight');
+          // Out Description
+          let q = document.createElement('span');
+          q.innerText = descriptionAdd[i].innerText;
+          outputDiv.append(q);
 
-        r.innerText = (
-          inputQtyAdd[i].value * unitWeightAdd[i].innerText
-        ).toFixed(2);
-        // weightKg = parseFloat(weightKg) + parseFloat(r.innerText);
-        outputDiv.append(r);
+          // Out Total Weight
+          let r = document.createElement('span');
+          r.classList.add('weight');
+
+          r.innerText = (
+            inputQtyAdd[i].value * unitWeightAdd[i].innerText
+          ).toFixed(2);
+          // weightKg = parseFloat(weightKg) + parseFloat(r.innerText);
+          outputDiv.append(r);
+        }
+
       }
     }
 
@@ -199,6 +222,8 @@ function materialCase() {
     for (let j = 0; j < inputQtyAdd.length; j++) {
       inputQtyAdd[j].value = '';
     }
+
+
 
     // Calculate Grand Totals and format outputs
     const outWeight = document.querySelectorAll('.weight');
@@ -209,5 +234,5 @@ function materialCase() {
     displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg. =>
         ${formatOutputWeight(weightKg * 2.204)} lbs. =>
         ${formatOutputWeight(weightKg / 1000.00)} tons`);
-  });
+  };
 }
