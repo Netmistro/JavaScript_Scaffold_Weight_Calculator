@@ -231,7 +231,7 @@ function materialCase() {
       weightKg = weightKg + parseFloat(element.innerText);
     });
     displayWeightDiv.innerText = '';
-    displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg. =>
+    displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg.=>
         ${formatOutputWeight(weightKg * 2.204)} lbs. =>
         ${formatOutputWeight(weightKg / 1000.00)} tons`);
   };
