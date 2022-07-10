@@ -163,18 +163,24 @@ function materialCase() {
 
   // Event listener for the click button
   addItemsButton.addEventListener('click', (e) => {
-
-
+    // Make the width of the output window larger
+    document.querySelector('.output-container').style.width = 'auto'
     populateOutputContainer();
   });
 
   // Event listener for the Return Key and Escape Key
   window.addEventListener('keydown', (e) => {
+
+    // Make the width of the output window larger
+    document.querySelector('.output-container').style.width = 'auto'
+
+    // Consider keypress events
     if (e.key === 'Enter') {
-      populateOutputContainer();
+      populateOutputContainer()
     } if (e.key === 'Escape') {
       window.location.reload();
     }
+
   });
 
   // Function for Pupulating the ouput Container

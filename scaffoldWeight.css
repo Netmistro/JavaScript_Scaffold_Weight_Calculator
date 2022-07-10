@@ -54,6 +54,7 @@ img {
 
 /* Bottom Container CSS */
 .output-container {
+    width: 0;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
