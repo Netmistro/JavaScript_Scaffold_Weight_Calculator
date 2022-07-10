@@ -7,7 +7,14 @@ const listContainer = document.getElementById('list-container');
 const outputContainer = document.querySelector('.output-container');
 const selectedMaterials = document.querySelectorAll('.selected-material')[0];
 const displayWeightDiv = document.querySelector('.total-weight');
+const inputContainer = document.querySelector('.input-container')
 const restartButton = document.querySelector('.btn-restart');
+// Use of fontawesome icons for a button graphic
+restartButton.innerHTML = '<i class="fa-solid fa-arrow-rotate-left"></i>'
+
+//Add Button Query Selector
+let addItemsButton = document.querySelector('.btn-add');
+addItemsButton.innerHTML = '<i class="fa-solid fa-plus"></i>'
 
 // Reload Browser
 restartButton.addEventListener('click', (e) => {
@@ -148,8 +155,6 @@ function formatInputTable(materialCategory) {
 
 // Function to add the materials based on a switch statement
 function materialCase() {
-  //Add Button Query Selector
-  let addItemsButton = document.querySelector('.btn-add');
 
   // Constants for each element
   let inputQtyAdd = document.querySelectorAll('.qty-add');
@@ -158,6 +163,8 @@ function materialCase() {
 
   // Event listener for the click button
   addItemsButton.addEventListener('click', (e) => {
+
+
     populateOutputContainer();
   });
 
@@ -174,7 +181,6 @@ function materialCase() {
   function populateOutputContainer() {
     // Loop through each element based on click add button
     let weightKg = 0.0;
-
 
 
     for (let i = 0; i < inputQtyAdd.length; i++) {
@@ -214,7 +220,6 @@ function materialCase() {
           // weightKg = parseFloat(weightKg) + parseFloat(r.innerText);
           outputDiv.append(r);
         }
-
       }
     }
 
@@ -223,16 +228,23 @@ function materialCase() {
       inputQtyAdd[j].value = '';
     }
 
-
-
     // Calculate Grand Totals and format outputs
     const outWeight = document.querySelectorAll('.weight');
     outWeight.forEach((element) => {
       weightKg = weightKg + parseFloat(element.innerText);
     });
+
+    // Create an arrow using fontawesome to seperate items
+    const arrow1 = document.createElement('span');
+    arrow1.classList = "fa-solid fa-arrow-right";
+    const arrow2 = document.createElement('span');
+    arrow2.classList = "fa-solid fa-arrow-right";
     displayWeightDiv.innerText = '';
-    displayWeightDiv.append(`${formatOutputWeight(weightKg)} Kg.=>
-        ${formatOutputWeight(weightKg * 2.204)} lbs. =>
-        ${formatOutputWeight(weightKg / 1000.00)} tons`);
+    displayWeightDiv.append(` ${formatOutputWeight(weightKg)} Kg.`);
+    displayWeightDiv.appendChild(arrow1);
+    displayWeightDiv.append(` ${formatOutputWeight(weightKg * 2.204)} lbs.`);
+    displayWeightDiv.appendChild(arrow2);
+    displayWeightDiv.append(` ${formatOutputWeight(weightKg / 1000.00)} tons`);
+
   };
 }
