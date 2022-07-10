@@ -57,6 +57,9 @@ img {
     width: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     padding: 0.5rem;
     margin: 0.3rem;
     background: var(--output-bg-color);
@@ -164,6 +167,7 @@ span {
 
 /* Total output weight */
 .total-weight {
+    width: auto;
     background-color: yellow;
     border-radius: 1rem;
     color: black;

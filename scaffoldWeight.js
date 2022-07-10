@@ -122,14 +122,6 @@ function addNewUnitWeight(weight) {
   listContainer.append(unitWeight);
 }
 
-// Add new Total Weight using Span
-function addNewTotalWeight(totalWeightAdd) {
-  const totalWeight = document.createElement('span');
-  totalWeight.classList.add('unit-weight-add');
-  totalWeight.innerText = totalWeightAdd;
-  listContainer.append(totalWeight);
-}
-
 // Format output Weights to 2 DP and commas for thousands
 function formatOutputWeight(myweight) {
   if (myweight < 1.00) {
