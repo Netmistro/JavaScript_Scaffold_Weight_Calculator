@@ -167,9 +167,9 @@ function materialCase() {
     document.querySelector('.output-container').style.width = 'auto'
 
     // Consider keypress events
-    if (e.key === 'Enter') {
+    if (e.key == 'Enter') {
       populateOutputContainer()
-    } if (e.key === 'Escape') {
+    } if (e.key == 'Escape') {
       window.location.reload();
     }
 
