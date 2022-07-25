@@ -9,9 +9,9 @@
 :root {
     --input-bg-color: #eb2135;
     --output-bg-color: #ef612f;
-    --button-bg-Color: #8557a3;
+    --button-bg-Color: #b8559f;
     --ouputWeight-bg-color: #fed42a;
-    --body-bg-color: #0000cc;
+    --body-bg-color: linear-gradient(45deg, #0000FF 0%, #b8559f 50%, #fED42A 100%);
 }
 
 /* General style */

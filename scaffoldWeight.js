@@ -1,5 +1,5 @@
 // Import from another file all the data created for the different material categories
-import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings1, scaffoldFittings2, formworkProps } from "./scaffoldWeightMaterials.js";
+import { scaffoldTubes, scaffoldBoard1_2m, scaffoldBoard1_5m, ladderAluminum, ladderTuffSteel, cuplockIntermediateAndBraces, cuplockOmegaTransomAndBatten, cuplockStandardsAndLedgers, ladderAndAlloyBeams, alloyAndAsterix, aluminumTubes, highYieldTubes, lvlOSHABoards, scaffoldAccessories, scaffoldFittings1, scaffoldFittings2, formworkProps, aluminumStaging, StaircaseAndToeBoards } from "./scaffoldWeightMaterials.js";
 
 // Add constants here
 const selectMaterialCategory = document.getElementById('material-dropdown');
@@ -7,14 +7,14 @@ const listContainer = document.getElementById('list-container');
 const outputContainer = document.querySelector('.output-container');
 const selectedMaterials = document.querySelectorAll('.selected-material')[0];
 const displayWeightDiv = document.querySelector('.total-weight');
-const inputContainer = document.querySelector('.input-container')
+const inputContainer = document.querySelector('.input-container');
 const restartButton = document.querySelector('.btn-restart');
 // Use of fontawesome icons for a button graphic
-restartButton.innerHTML = '<i class="fa-solid fa-arrow-rotate-left"></i>'
+restartButton.innerHTML = '<i class="fa-solid fa-arrow-rotate-left"></i>';
 
 //Add Button Query Selector
 let addItemsButton = document.querySelector('.btn-add');
-addItemsButton.innerHTML = '<i class="fa-solid fa-plus"></i>'
+addItemsButton.innerHTML = '<i class="fa-solid fa-plus"></i>';
 
 // Reload Browser
 restartButton.addEventListener('click', (e) => {
@@ -88,6 +88,12 @@ selectMaterialCategory.addEventListener('change', (e) => {
       formatInputTable(formworkProps);
       break;
     case '16':
+      formatInputTable(aluminumStaging);
+      break;
+    case '17':
+      formatInputTable(StaircaseAndToeBoards);
+      break;
+    case '18':
       formatInputTable(scaffoldAccessories);
       break;
     default:
@@ -156,7 +162,7 @@ function materialCase() {
   // Event listener for the click button
   addItemsButton.addEventListener('click', (e) => {
     // Make the width of the output window larger
-    document.querySelector('.output-container').style.width = 'auto'
+    document.querySelector('.output-container').style.width = 'auto';
     populateOutputContainer();
   });
 
@@ -164,11 +170,11 @@ function materialCase() {
   window.addEventListener('keydown', (e) => {
 
     // Make the width of the output window larger
-    document.querySelector('.output-container').style.width = 'auto'
+    document.querySelector('.output-container').style.width = 'auto';
 
     // Consider keypress events
     if (e.key == 'Enter') {
-      populateOutputContainer()
+      populateOutputContainer();
     } if (e.key == 'Escape') {
       window.location.reload();
     }

@@ -56,7 +56,7 @@ export const scaffoldTubes = [
         name: "4mm Galv. Scaffold Tube EN39:2001 48.3mm Dia. - 1'",
         weight: '1.36',
         group: 'Scaffold Tube',
-    },
+    }
 ];
 
 // Define the variables to populate the Scaffold Boards 1.2m table here
@@ -79,6 +79,11 @@ export const scaffoldBoard1_2m = [
     {
         name: "Scaffold Board BS EN 2482 1.2m Support MG - 6'",
         weight: '9.25',
+        group: 'Scaffold Boards',
+    },
+    {
+        name: "Scaffold Board BS EN 2482 1.2m Support MG - 5'",
+        weight: '7.71',
         group: 'Scaffold Boards',
     },
     {
@@ -118,6 +123,11 @@ export const scaffoldBoard1_5m = [
     {
         name: "Scaffold Board BS EN 2482 1.5m Support MG - 6'",
         weight: '8.77',
+        group: 'Scaffold Boards',
+    },
+    {
+        name: "Scaffold Board BS EN 2482 1.5m Support MG - 5'",
+        weight: '7.31',
         group: 'Scaffold Boards',
     },
     {
@@ -277,33 +287,38 @@ export const cuplockStandardsAndLedgers = [
         weight: '2.50',
         group: 'Cuplock',
     },
+    {
+        name: 'Cuplock Swan Neck Standard 2.0m - 6\'',
+        weight: '7.20',
+        group: 'Cuplock',
+    },
 ];
 
 // Define the variables to populate the Cuplock Intermediate & Brace here
 export const cuplockIntermediateAndBraces = [
     {
-        name: 'Cuplock Intermediate 2.5m - 10\'',
+        name: 'Cuplock Intermediate Trans. 2.5m - 10\'',
         weight: '16.50',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Intermediate 1.8m - 8\'',
+        name: 'Cuplock Intermediate Trans. 1.8m - 8\'',
         weight: '7.30',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Intermediate 1.3m - 4\'',
+        name: 'Cuplock Intermediate Trans. 1.3m - 4\'',
         weight: '5.50',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Intermediate 0.9m - 3\'',
+        name: 'Cuplock Intermediate Trans. 0.9m - 3\'',
         weight: '4.13',
         group: 'Cuplock',
     },
     {
         name: 'Cuplock Brace 3.0m x 2.0m - 10\'',
-        weight: '14.38',
+        weight: '13.00',
         group: 'Cuplock',
     },
     {
@@ -312,13 +327,18 @@ export const cuplockIntermediateAndBraces = [
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Brace 1.8m x 2.0m - 6\'',
+        name: 'Cuplock Brace 2.5m x 1.5m - 6\'',
+        weight: '10.70',
+        group: 'Cuplock',
+    },
+    {
+        name: 'Cuplock Brace 1.8m x 2.0m - 5\'',
         weight: '9.80',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Brace 1.8m x 1.5m - 5\'',
-        weight: '8.17',
+        name: 'Cuplock Brace 1.8m x 1.5m - 4\'',
+        weight: '8.70',
         group: 'Cuplock',
     },
 ];
@@ -356,18 +376,28 @@ export const cuplockOmegaTransomAndBatten = [
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Interlocking Steel Plank 2.5m - 10\'',
-        weight: '17.82',
+        name: 'Cuplock Interlocking Steel Plank 1.3m - 4\'',
+        weight: '9.90',
+        group: 'Cuplock',
+    },
+    {
+        name: 'Cuplock Interlocking Steel Plank 1.6m - 5\'',
+        weight: '12.10',
         group: 'Cuplock',
     },
     {
         name: 'Cuplock Interlocking Steel Plank 1.8m - 6\'',
-        weight: '13.76',
+        weight: '13.60',
         group: 'Cuplock',
     },
     {
-        name: 'Cuplock Interlocking Steel Plank 1.3m - 4\'',
-        weight: '9.80',
+        name: 'Cuplock Interlocking Steel Plank 2.5m - 8\'',
+        weight: '18.60',
+        group: 'Cuplock',
+    },
+    {
+        name: 'Cuplock Interlocking Steel Plank 3.0m - 10\'',
+        weight: '22.30',
         group: 'Cuplock',
     },
 ];
@@ -490,48 +520,58 @@ export const alloyAndAsterix = [
 // Define the variables to populate the Aluminum Scaffold Tubes here
 export const aluminumTubes = [
     {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 1\'',
-        weight: '0.500',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 2\'',
-        weight: '1.000',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 4\'',
-        weight: '2.000',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 6\'',
-        weight: '3.00',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 8\'',
-        weight: '4.00',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 10\'',
-        weight: '5.00',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 13\'',
-        weight: '6.50',
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 21\'',
+        weight: '10.000',
         group: 'Scaffold Tubes',
     },
     {
         name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 16\'',
-        weight: '8.00',
-        group: 'CuScaffold Tubesplock',
+        weight: '7.619',
+        group: 'Scaffold Tubes',
     },
     {
-        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 21\'',
-        weight: '10.00',
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 13\'',
+        weight: '6.190',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 10\'',
+        weight: '4.762',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 8\'',
+        weight: '3.810',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 6\'',
+        weight: '2.857',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 5\'',
+        weight: '2.381',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 4\'',
+        weight: '1.905',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 3\'',
+        weight: '1.429',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 2\'',
+        weight: '0.952',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: 'Aluminum Scaffold Tube 48.3mm Dia. - BS EN 755-2:2008 - 1\'',
+        weight: '0.476',
         group: 'Scaffold Tubes',
     },
 ];
@@ -539,38 +579,58 @@ export const aluminumTubes = [
 // Define the variables to populate the High Yield Scaffold Tubes here
 export const highYieldTubes = [
     {
-        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 5\'',
-        weight: '5.40',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 6\'',
-        weight: '6.48',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 8\'',
-        weight: '8.64',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 10\'',
-        weight: '10.80',
-        group: 'Scaffold Tubes',
-    },
-    {
-        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 13\'',
-        weight: '14.04',
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 21\'',
+        weight: '22.680',
         group: 'Scaffold Tubes',
     },
     {
         name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 16\'',
-        weight: '17.28',
+        weight: '17.280',
         group: 'Scaffold Tubes',
     },
     {
-        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 21\'',
-        weight: '22.68',
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 13\'',
+        weight: '14.040',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 10\'',
+        weight: '10.800',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 8\'',
+        weight: '8.640',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 6\'',
+        weight: '6.480',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 5\'',
+        weight: '5.400',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 4\'',
+        weight: '4.320',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 3\'',
+        weight: '3.240',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 2\'',
+        weight: '2.160',
+        group: 'Scaffold Tubes',
+    },
+    {
+        name: '3.2mm High Yield Galv. Tube BS EN 10219-1:2006 Grade S355 - 1\'',
+        weight: '1.080',
         group: 'Scaffold Tubes',
     },
 ];
@@ -647,8 +707,8 @@ export const scaffoldAccessories = [
         group: 'Accessory',
     },
     {
-        name: 'Reversible Handrail Safety Gate 1.02m x 0.57m',
-        weight: '9.00',
+        name: 'Ladder Safety Gate 1.02m x 0.57m',
+        weight: '8.50',
         group: 'Accessory',
     },
     {
@@ -657,8 +717,8 @@ export const scaffoldAccessories = [
         group: 'Accessory',
     },
     {
-        name: 'Sole Pads - 18"',
-        weight: '2.00',
+        name: 'Ladder Clamp',
+        weight: '1.70',
         group: 'Accessory',
     },
     {
@@ -795,8 +855,13 @@ export const scaffoldFittings1 = [
 // Define the variables to populate the Scaffold Fittings Special ones here
 export const scaffoldFittings2 = [
     {
-        name: 'Pressed Joint Pin BS 1139.2.2',
+        name: 'Pressed Joint Pin',
         weight: '0.80',
+        group: 'Fittings',
+    },
+    {
+        name: 'Deck Adapter',
+        weight: '1.30',
         group: 'Fittings',
     },
     {
@@ -907,5 +972,143 @@ export const formworkProps = [
         name: 'Trench Strut Size 3 (1.03m-1.73m)(3\'-4" - 5\'-8")',
         weight: '9.80',
         group: 'Formwork',
+    },
+];
+
+// Define the variables to populate the Aluminum Staging/Pitboards here
+export const aluminumStaging = [
+    {
+        name: "2.5m Aluminium Staging (450mm Wide)",
+        weight: '13.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "2.5m Aluminium Staging (600mm Wide)",
+        weight: '14.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "3.0m Aluminium Staging (450mm Wide)",
+        weight: '15.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "3.0m Aluminium Staging (600mm Wide)",
+        weight: '16.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "3.6m Aluminium Staging (450mm Wide)",
+        weight: '17.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "3.6m Aluminium Staging (600mm Wide)",
+        weight: '18.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "4.2m Aluminium Staging (450mm Wide)",
+        weight: '21.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "4.2m Aluminium Staging (600mm Wide)",
+        weight: '23.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "4.8m Aluminium Staging (450mm Wide)",
+        weight: '28.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "4.8m Aluminium Staging (600mm Wide)",
+        weight: '30.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "5.4m Aluminium Staging (450mm Wide)",
+        weight: '30.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "5.4m Aluminium Staging (600mm Wide)",
+        weight: '32.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "6.0m Aluminium Staging (450mm Wide)",
+        weight: '34.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "6.0m Aluminium Staging (600mm Wide)",
+        weight: '36.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "6.6m Aluminium Staging (450mm Wide)",
+        weight: '40.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "6.6m Aluminium Staging (600mm Wide)",
+        weight: '43.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "7.2m Aluminium Staging (450mm Wide)",
+        weight: '43.00',
+        group: 'Aluminum Staging',
+    },
+    {
+        name: "7.2m Aluminium Staging (600mm Wide)",
+        weight: '46.00',
+        group: 'Aluminum Staging',
+    },
+];
+
+// Define the variables to populate the Aluminum Staging/Pitboards here
+export const StaircaseAndToeBoards = [
+    {
+        name: "Steel Toeboard - 1.3m",
+        weight: '3.1',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "Steel Toeboard - 1.8m",
+        weight: '4.3',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "Steel Toeboard - 2.5m",
+        weight: '8.5',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "4-Leg Staircase (1.8m Wide) - 2.0m Height",
+        weight: '495.00',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "8-Leg Staircase (1.8m Wide) - 2.0m Height",
+        weight: '782.00',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "10-Leg Staircase (1.8m Wide) - 2.0m Height",
+        weight: '840.00',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "10-Leg Staircase (2.5m Wide) - 2.0m Height",
+        weight: '1003.00',
+        group: 'Staircase & Toeboards',
+    },
+    {
+        name: "10-Leg Public Access Staircase - 2.0m Height",
+        weight: '1238.00',
+        group: 'Staircase & Toeboards',
     },
 ];
