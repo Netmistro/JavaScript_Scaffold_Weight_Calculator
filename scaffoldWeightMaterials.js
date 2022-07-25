@@ -635,51 +635,54 @@ export const highYieldTubes = [
     },
 ];
 
-// Define the variables to populate the LVL OSHA Boards here
+// Define the variables to populate the LVL OSHA Boards here Unit weights =>
+// 38mm x 225mm - 5.0kg
+// 42mm x 225mm - 5.6kg
+// 42mm x 250mm - 6.2kg
 export const lvlOSHABoards = [
     {
         name: 'Scaffold Board LVL OSHA - 38mm x 225mm (3.9M) - 13\'',
-        weight: '0',
+        weight: '19.50',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 38mm x 225mm (3.0M) - 10\'',
-        weight: '0',
+        weight: '15.0',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 38mm x 225mm (2.5M) - 8\'',
-        weight: '0',
+        weight: '12.50',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 42mm x 225mm (3.9M) - 13\'',
-        weight: '0',
+        weight: '21.84',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 42mm x 225mm (3.0M) - 10\'',
-        weight: '0',
+        weight: '16.80',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 42mm x 225mm (2.5M) - 8\'',
-        weight: '0',
+        weight: '14.00',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 42mm x 250mm (3.9M) - 13\'',
-        weight: '0',
+        weight: '24.18',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 42mm x 250mm (3.0M) - 10\'',
-        weight: '0',
+        weight: '18.60',
         group: 'LVL Boards',
     },
     {
         name: 'Scaffold Board LVL OSHA - 42mm x 250mm (2.5M) - 8\'',
-        weight: '0',
+        weight: '15.50',
         group: 'LVL Boards',
     },
 ];
