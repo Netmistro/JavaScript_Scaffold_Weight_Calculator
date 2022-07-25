@@ -67,7 +67,7 @@ img {
     outline: none;
     border: none;
     border-radius: 1rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: 5px -5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* The only Button on the form */
